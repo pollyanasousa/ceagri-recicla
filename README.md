@@ -1,4 +1,4 @@
-# 🗑️ CEAGRI Recicla
+# CEAGRI Recicla
 
 Jogo educativo de reciclagem desenvolvido para a disciplina de **[Princípios de Programação](https://classroom.google.com/u/6/c/Nzk2NDE4OTU2NzQx)** do curso de **Bacharelado em Sistemas de Informação (BSI)** da **UFRPE**.
 
