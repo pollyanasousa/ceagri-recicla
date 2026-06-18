@@ -43,10 +43,8 @@ class Lixeira:
             imagem_carregada, (self.largura, self.altura)
         )
 
-    # ───────────────────────────────────────────────────────
     # MÉTODO: mover
     # Move a lixeira com as teclas seta esquerda e direita
-    # ───────────────────────────────────────────────────────
     def mover(self):
         teclas_pressionadas = pygame.key.get_pressed()
 
@@ -68,10 +66,8 @@ class Lixeira:
         self.area_colisao.x = self.posicao_x
         self.area_colisao.y = self.posicao_y
 
-    # ───────────────────────────────────────────────────────
     # MÉTODO: desenhar
     # Desenha a imagem da lixeira na tela
-    # ───────────────────────────────────────────────────────
     def desenhar(self, tela):
         # desenha a imagem na posição atual da lixeira
         tela.blit(self.imagem_lixeira, (self.posicao_x, self.posicao_y))

@@ -54,9 +54,7 @@ class Lixo:
                     ]},
     }
 
-    # ───────────────────────────────────────────────────────
-    # __init__ = construtor
-    # ───────────────────────────────────────────────────────
+    #construtor
     def __init__(self, fonte, multiplicador_velocidade=1.0):
         self.fonte = fonte
 
@@ -86,23 +84,17 @@ class Lixo:
             self.altura
         )
 
-    # ───────────────────────────────────────────────────────
     # MÉTODO: cair
-    # ───────────────────────────────────────────────────────
     def cair(self):
         self.posicao_y      += self.velocidade
         self.area_colisao.y  = self.posicao_y
 
-    # ───────────────────────────────────────────────────────
     # MÉTODO: saiu_da_tela
-    # ───────────────────────────────────────────────────────
     def saiu_da_tela(self):
         return self.posicao_y > constantes.ALTURA_TELA
 
-    # ───────────────────────────────────────────────────────
     # MÉTODO: desenhar
     # Desenha a imagem do item na tela com nome abaixo
-    # ───────────────────────────────────────────────────────
     def desenhar(self, tela):
         # desenha a imagem do objeto
         tela.blit(self.imagem, (self.posicao_x, self.posicao_y))

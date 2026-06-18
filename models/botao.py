@@ -40,10 +40,7 @@ class Botao:
             self.altura
         )
 
-    # ───────────────────────────────────────────────────────
-    # MÉTODO: desenhar
     # Desenha o botão na tela
-    # ───────────────────────────────────────────────────────
     def desenhar(self, tela):
         # pega a posição atual do mouse
         posicao_mouse = pygame.mouse.get_pos()
@@ -72,11 +69,8 @@ class Botao:
             # blit = desenha a imagem do texto na tela
             tela.blit(imagem_texto, (texto_posicao_x, texto_posicao_y))
 
-    # ───────────────────────────────────────────────────────
-    # MÉTODO: foi_clicado
     # Verifica se o botão foi clicado
     # retorna True se sim, False se não
-    # ───────────────────────────────────────────────────────
     def foi_clicado(self, evento):
         # MOUSEBUTTONDOWN = evento de clique do mouse
         if evento.type == pygame.MOUSEBUTTONDOWN:
