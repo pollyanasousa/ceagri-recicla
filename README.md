@@ -23,22 +23,26 @@ Jogo educativo de reciclagem desenvolvido para a disciplina de **[Princípios de
 ## 🕹️ Como Jogar
 
 1. Clique em **START** na tela inicial
-2. Escolha sua lixeira: **Papel**, **Plástico**, **Vidro** ou **Metal**
+2. Escolha sua lixeira entre os **10 tipos disponíveis**
 3. Use as **setas ← →** do teclado para mover a lixeira
 4. Capture os itens do **tipo correto** para ganhar pontos
 5. Capturar o tipo **errado** perde uma vida
 6. O jogo termina quando todas as **4 vidas** se esgotarem
-7. Pressione **R** para jogar novamente ou **ESC** para sair
+7. Pressione **P** para pausar e retomar o jogo
+8. Pressione **R** para jogar novamente ou **ESC** para sair
 
 ---
 
 ## ⚙️ Funcionalidades
 
-- 🎯 **4 tipos de lixo**: Papel, Plástico, Vidro e Metal
+- 🎯 **10 tipos de lixo**: Papel, Plástico, Vidro, Metal, Orgânico, Madeira, Não Reciclável, Hospitalar, Radioativo e Resíduos Perigosos
 - 🖼️ **Imagens reais** dos objetos recicláveis
 - 🚀 **Velocidade progressiva**: a cada 50 pontos o jogo fica mais difícil
 - 📊 **Sistema de níveis**: aviso na tela ao subir de nível
-- 🏆 **Recorde salvo**: o maior placar fica salvo mesmo após fechar o jogo
+- 🔥 **Sistema de combo**: acertos consecutivos aumentam o multiplicador de pontos (a cada 5 acertos seguidos o multiplicador sobe 0.5x)
+- ⭐ **Lixo Bônus**: item raro com brilho dourado que vale 30 pontos — sempre do tipo da sua lixeira
+- ⏸️ **Pausa**: pressione **P** durante o jogo para pausar e retomar sem perder o progresso
+- 🏆 **Ranking Top 5**: as 5 melhores pontuações ficam salvas mesmo após fechar o jogo, com tela própria acessível no menu
 - 💖 **Sistema de vidas**: 4 vidas representadas por ícones
 - 🖥️ **Tela cheia** com tamanho proporcional a qualquer resolução
 
@@ -64,19 +68,22 @@ Jogo educativo de reciclagem desenvolvido para a disciplina de **[Princípios de
 ### Bibliotecas Auxiliares
 - **random** — sorteio aleatório dos tipos e itens de lixo
 - **sys** — encerramento do programa
-- **json** — salvamento e leitura do recorde em arquivo
-- **os** — verificação de existência do arquivo de recorde
+- **json** — salvamento e leitura do ranking em arquivo
+- **os** — verificação de existência do arquivo de ranking
+- **math** — cálculo do grid de lixeiras na tela de escolha
 
 ### Paradigma: Programação Orientada a Objetos (POO)
 O projeto foi estruturado com **POO**, aplicando os seguintes conceitos:
 
 | Conceito | Onde foi aplicado |
 |---|---|
-| **Classes** | `Jogo`, `Lixeira`, `Lixo`, `Botao` — cada elemento do jogo é uma classe |
+| **Classes** | `Jogo`, `Lixeira`, `Lixo`, `LixoBonus`, `Botao` — cada elemento do jogo é uma classe |
+| **Herança** | `LixoBonus` herda de `Lixo`, reaproveitando `cair()` e `saiu_da_tela()` |
+| **Polimorfismo** | `LixoBonus` sobrescreve `desenhar()` para adicionar o fundo dourado |
 | **Encapsulamento** | Atributos e métodos organizados dentro de cada classe |
 | **Abstração** | Cada classe representa um elemento real do jogo com responsabilidade única |
 | **Instanciação** | Objetos criados dinamicamente (ex: novos lixos caindo a cada frame) |
-| **Atributos de classe** | `TIPOS_DE_LIXO` em `Lixo` — compartilhado por todas as instâncias |
+| **Atributos de classe** | `TIPOS_DE_LIXO` em `Lixo` e `PONTOS_BONUS` em `LixoBonus` — compartilhados por todas as instâncias |
 | **Métodos** | `desenhar()`, `mover()`, `cair()`, `foi_clicado()` etc. |
 
 ---
@@ -91,7 +98,7 @@ ceagri_recicla/
 ├── models/
 │   ├── jogo.py              # Controle geral das telas e lógica
 │   ├── lixeira.py           # Lixeira controlada pelo jogador
-│   ├── lixo.py              # Itens de lixo que caem na tela
+│   ├── lixo.py              # Itens de lixo que caem na tela (Lixo e LixoBonus)
 │   └── botao.py             # Botões clicáveis da interface
 │
 ├── utils/
@@ -101,7 +108,7 @@ ceagri_recicla/
 │   ├── imagens/             # Imagens das lixeiras, lixos e ícones
 │   └── sons/                # Arquivos de áudio do jogo (MP3)
 │
-├── recorde.json             # Arquivo gerado automaticamente com o recorde
+├── recorde.json             # Arquivo gerado automaticamente com o ranking Top 5
 └── README.md
 ```
 
@@ -133,7 +140,7 @@ python main.py
 
 **Pollyana Cassia de Sousa**  
 Curso: Bacharelado em Sistemas de Informação — UFRPE  
-Disciplina: [Princípios de Programação] 
+Disciplina: [Princípios de Programação]  
 Professor: **Cleyton Vanut Cordeiro de Magalhães**
 
 ---

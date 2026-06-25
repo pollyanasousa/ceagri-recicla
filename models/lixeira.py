@@ -31,16 +31,13 @@ class Lixeira:
             self.altura
         )
 
-        # ── carrega a imagem da lixeira ──
+        # ── carrega a imagem da lixeira (com reserva caso o arquivo não exista) ──
         # o nome do arquivo segue o padrão: lixeira-{tipo}.png
         caminho_imagem = f"assets/imagens/lixeira-{tipo_aceito}.png"
 
-        # carrega a imagem do disco
-        imagem_carregada = pygame.image.load(caminho_imagem)
-
-        # redimensiona a imagem para o tamanho da lixeira
-        self.imagem_lixeira = pygame.transform.scale(
-            imagem_carregada, (self.largura, self.altura)
+        self.imagem_lixeira = constantes.carregar_imagem_ou_placeholder(
+            caminho_imagem, self.largura, self.altura,
+            cor=cor_lixeira, texto=tipo_aceito, fonte=fonte
         )
 
     # MÉTODO: mover
