@@ -35,16 +35,16 @@ Jogo educativo de reciclagem desenvolvido para a disciplina de **[Princípios de
 
 ## ⚙️ Funcionalidades
 
-- 🎯 **10 tipos de lixo**: Papel, Plástico, Vidro, Metal, Orgânico, Madeira, Não Reciclável, Hospitalar, Radioativo e Resíduos Perigosos
-- 🖼️ **Imagens reais** dos objetos recicláveis
-- 🚀 **Velocidade progressiva**: a cada 50 pontos o jogo fica mais difícil
-- 📊 **Sistema de níveis**: aviso na tela ao subir de nível
-- 🔥 **Sistema de combo**: acertos consecutivos aumentam o multiplicador de pontos (a cada 5 acertos seguidos o multiplicador sobe 0.5x)
-- ⭐ **Lixo Bônus**: item raro com brilho dourado que vale 30 pontos — sempre do tipo da sua lixeira
-- ⏸️ **Pausa**: pressione **P** durante o jogo para pausar e retomar sem perder o progresso
-- 🏆 **Ranking Top 5**: as 5 melhores pontuações ficam salvas mesmo após fechar o jogo, com tela própria acessível no menu
-- 💖 **Sistema de vidas**: 4 vidas representadas por ícones
-- 🖥️ **Tela cheia** com tamanho proporcional a qualquer resolução
+- **10 tipos de lixo**: Papel, Plástico, Vidro, Metal, Orgânico, Madeira, Não Reciclável, Hospitalar, Radioativo e Resíduos Perigosos
+- **Imagens reais** dos objetos recicláveis
+- **Velocidade progressiva**: a cada 50 pontos o jogo fica mais difícil
+- **Sistema de níveis**: aviso na tela ao subir de nível
+- **Sistema de combo**: acertos consecutivos aumentam o multiplicador de pontos (a cada 5 acertos seguidos o multiplicador sobe 0.5x)
+- **Lixo Bônus**: item raro com brilho dourado que vale 30 pontos — sempre do tipo da sua lixeira
+- **Pausa**: pressione **P** durante o jogo para pausar e retomar sem perder o progresso
+- **Ranking Top 5**: as 5 melhores pontuações ficam salvas mesmo após fechar o jogo, com tela própria acessível no menu
+- **Sistema de vidas**: 4 vidas representadas por ícones
+- **Tela cheia** com tamanho proporcional a qualquer resolução
 
 ---
 
